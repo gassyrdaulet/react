@@ -8,7 +8,7 @@ function App() {
   const [info, setInfo] = useState(0)
 
   const fetchData = async () => {
-    setInfo((await axios.get('http://localhost:8080/data1')).data)
+    setInfo((await axios.get('http://jackmarket.kz:8080/data1')).data)
   }
 
   useEffect( () => {
