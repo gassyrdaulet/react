@@ -8,7 +8,7 @@ function App() {
   const [info, setInfo] = useState(0)
 
   const fetchData = async () => {
-    setInfo((await axios.get('http://localhost:8080/data')).data)
+    setInfo((await axios.get('http://localhost:8080/data1')).data)
   }
 
   useEffect( () => {
@@ -24,7 +24,7 @@ function App() {
           info===0?
             ''
           :
-            info.map((info) => <p>{info}</p>)
+            info.map((info, index) => <p key={index}>{info}</p>)
         }
     </div>
   );
